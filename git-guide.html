@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Started (and GIT GOOD)</title>
+    <link rel="stylesheet" href="git-guide.css">
+</head>
+<body>
+
+    <header>
+        <h1>Git Started (and GIT GOOD)</h1>
+        <p><strong>Week-1</strong></p>
+    </header>
+
+    <section>
+        <h2>Brief Introduction on Git</h2>
+        <p>Git is a <strong>Version Control System</strong>, commonly referred to as <strong>VCS</strong>. As the name suggests, it helps you keep track of versions of files and is often used by programmers to collaborate on software development.</p>
+    </section>
+
+    <section>
+        <h3>'Git' is NOT 'Github'</h3>
+        <p>Git is an open-source VCS tool used <strong>locally (offline)</strong>. GitHub, on the other hand, is a <strong>cloud-based (online)</strong> VCS tool.</p>
+    </section>
+
+    <section>
+        <h3>Why should you use GitHub?</h3>
+        <p>GitHub allows you to keep track of versions of your code. If you make a mistake and need to undo it, you can retrieve a previous version if it's pushed to GitHub!</p>
+    </section>
+
+    <section>
+        <h2>So how do I get started?</h2>
+        <h3>Windows</h3>
+        <p>If you have Windows, <a href="https://github.com/git-for-windows/git/releases/download/v2.46.0.windows.1/Git-2.46.0-64-bit.exe" target="_blank">download Git here</a>.</p>
+        <p>Once installed, run <code>git -v</code> in Git Bash to check your installation.</p>
+    </section>
+
+    <section>
+        <h3>Mac</h3>
+        <p>Open your terminal and paste:</p>
+        <pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+        <p>Then install Git using:</p>
+        <pre><code>brew install git</code></pre>
+    </section>
+
+    <section>
+        <h3>Linux</h3>
+        <p>If you're using Linux, Git is likely pre-installed. If not, use your package manager to install it.</p>
+    </section>
+
+    <section>
+        <h2>Crucial Steps to Securely Connect Git with GitHub</h2>
+        <ol>
+            <li>Create a GitHub account.</li>
+            <li>Open your terminal and run:</li>
+        </ol>
+        <pre><code>ssh-keygen -t ed25519 -C "your_email@example.com"</code></pre>
+        <p>If an error occurs, try:</p>
+        <pre><code>ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</code></pre>
+    </section>
+
+    <section>
+        <h3>Adding SSH Key to GitHub</h3>
+        <ol>
+            <li>Run <code>cat ~/.ssh/id_ed25519.pub</code> and copy the key.</li>
+            <li>Go to <a href="https://github.com/settings/keys" target="_blank">GitHub SSH Keys</a> and add the key.</li>
+        </ol>
+        <p>To test the connection, type:</p>
+        <pre><code>ssh -T git@github.com</code></pre>
+        <p>If successful, you'll see:</p>
+        <blockquote>Hi Your_name_here! You've successfully authenticated, but GitHub does not provide shell access.</blockquote>
+    </section>
+
+</body>
+</html>
